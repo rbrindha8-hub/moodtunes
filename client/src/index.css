@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom mood theme colors */
+  --mood-purple: hsl(244, 84%, 66%);
+  --mood-purple-light: hsl(249, 84%, 69%);
+  --mood-coral: hsl(38, 92%, 50%);
+  --mood-coral-light: hsl(0, 84%, 60%);
+  --mood-emerald: hsl(162, 84%, 39%);
+  --dark-slate: hsl(220, 69%, 5%);
+  --dark-slate-light: hsl(217, 33%, 17%);
+  --dark-slate-medium: hsl(217, 19%, 27%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .mood-button-happy {
+    background: linear-gradient(to bottom right, hsl(51, 100%, 61%), hsl(31, 100%, 60%));
+  }
+  
+  .mood-button-sad {
+    background: linear-gradient(to bottom right, hsl(204, 70%, 61%), hsl(217, 70%, 61%));
+  }
+  
+  .mood-button-energetic {
+    background: linear-gradient(to bottom right, hsl(0, 70%, 61%), hsl(327, 73%, 61%));
+  }
+  
+  .mood-button-calm {
+    background: linear-gradient(to bottom right, hsl(159, 64%, 61%), hsl(158, 64%, 51%));
+  }
+  
+  .mood-button-anxious {
+    background: linear-gradient(to bottom right, hsl(249, 70%, 61%), hsl(244, 70%, 61%));
+  }
+  
+  .mood-button-peaceful {
+    background: linear-gradient(to bottom right, hsl(244, 70%, 61%), hsl(249, 70%, 61%));
+  }
+  
+  .mood-button-excited {
+    background: linear-gradient(to bottom right, hsl(327, 73%, 61%), hsl(0, 70%, 61%));
+  }
+  
+  .mood-button-melancholy {
+    background: linear-gradient(to bottom right, hsl(244, 50%, 41%), hsl(249, 50%, 41%));
+  }
+  
+  .mood-button-focused {
+    background: linear-gradient(to bottom right, hsl(198, 50%, 41%), hsl(204, 50%, 41%));
+  }
+  
+  .mood-button-romantic {
+    background: linear-gradient(to bottom right, hsl(327, 73%, 61%), hsl(314, 73%, 61%));
+  }
+}
